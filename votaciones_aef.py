@@ -38,6 +38,7 @@ def validate_votes(votos_raw,students):
 		if str(voto['matricula']) in students:
 			#print('cool')
 			new_votos_raw.append(voto)
+
 	return new_votos_raw
 
 #Extracción de los puestos
@@ -89,6 +90,7 @@ students_file = codecs.open('INSCRITOS_EN_FISICA_AGO_DIC_2019.csv', mode = 'r',e
 students = load_data(students_file)
 students = Normalizar_matriculas(students)
 students = valid_mat(students)
+
 
 #----FLUJO VOTOS------
 # 1. Se cargan los votos
